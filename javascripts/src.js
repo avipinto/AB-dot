@@ -4,6 +4,8 @@ $(document).ready(function(){
   
   $("#export").on("click",function(event)
   {
+    event.preventDefault();
+    window.print();
      this.href=$("#cnv")[0].toDataURL();
   });
 });
