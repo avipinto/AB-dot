@@ -24,7 +24,7 @@ span{display:inline-block;font-family:Arial;white-space:nowrap;}
 
 
 
-/*@media print {*/
+@media print {
   #title .credits {
     display: block;
     width: 100%;
@@ -41,4 +41,4 @@ span{display:inline-block;font-family:Arial;white-space:nowrap;}
   }
   .credits,form,#header,#title{display:none} 
 
-/*}*/
+}
