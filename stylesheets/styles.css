@@ -1,6 +1,6 @@
 
 
-@media print, screen and (max-width: 720px) {
+@media print {
   #title .credits {
     display: block;
     width: 100%;
@@ -15,20 +15,10 @@
     float: none;
     display: block;
   }
-}
-@media print, screen and (max-width: 480px) {
-  #header {
-    margin-top: -20px;
-  }
+  .credits,form,#header,#title{display:none} 
 
-  section {
-    margin-top: 40px;
-  }
-
-  nav {
-    display: none;
-  }
 }
+
 
 canvas{margin-top:20px;}
 input[type="text"],input[type="number"] {
