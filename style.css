@@ -1,0 +1,20 @@
+canvas{margin-top:20px;}
+input[type="text"],input[type="number"] {
+  border: 1px solid #ddd;
+  padding: 6px;
+  font-size: 18px;
+  width:200px;
+  display: inline-block;
+} 
+input[type="number"]{width:45px;}
+#export {
+  display: inline-block;
+  height: 35px;
+  line-height:35px;
+  color: #fff;
+  font-size: 18px;
+  background-color:#1EF;
+  text-decoration:none; 
+  padding:0px 5px 0px 5px;
+}
+span{display:inline-block;font-family:Arial;white-space:nowrap;}
