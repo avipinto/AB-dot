@@ -1,25 +1,5 @@
 
 
-@media print {
-  #title .credits {
-    display: block;
-    width: 100%;
-    line-height: 30px;
-    text-align: center;
-  }
-  #title .credits .left {
-    float: none;
-    display: block;
-  }
-  #title .credits .right {
-    float: none;
-    display: block;
-  }
-  .credits,form,#header,#title{display:none} 
-
-}
-
-
 canvas{margin-top:20px;}
 input[type="text"],input[type="number"] {
   border: 1px solid #ddd;
@@ -40,3 +20,25 @@ input[type="number"]{width:45px;}
   padding:0px 5px 0px 5px;
 }
 span{display:inline-block;font-family:Arial;white-space:nowrap;}
+
+
+
+
+/*@media print {*/
+  #title .credits {
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+  }
+  #title .credits .left {
+    float: none;
+    display: block;
+  }
+  #title .credits .right {
+    float: none;
+    display: block;
+  }
+  .credits,form,#header,#title{display:none} 
+
+/*}*/
