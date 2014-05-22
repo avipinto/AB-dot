@@ -5,8 +5,11 @@ $(document).ready(function(){
   $("#export").on("click",function(event)
   {
     event.preventDefault();
-    window.print();
-     this.href=$("#cnv")[0].toDataURL();
+   
+     //this.href=$("#cnv")[0].toDataURL();
+     var url = $("#cnv")[0].toDataURL();
+     $("#cnv").replaceWith("<img src='" +url + "' />");
+      window.print();
   });
 });
 
