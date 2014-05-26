@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $("#txt,#fontSize").on("change keyup",drawText)
+  $("#txt,#fontSize,#dashesSpace").on("change keyup",drawText)
   drawText();
   
   $("#export").on("click",function(event)
@@ -21,6 +21,7 @@ function drawText(event)
   var canvas = $("#cnv").removeClass("hidden")[0],
       ctx = canvas.getContext("2d"),
       fontSize = $("#fontSize").val(),
+      dashesSpace = $("#dashesSpace").val(),
       newText = $.trim($("#txt").val()),
       canvasNewSize = getCanvasSize(newText,fontSize);
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -29,7 +30,7 @@ function drawText(event)
   
   //http://stackoverflow.com/questions/15397036/drawing-dashed-lines-on-html5-canvas
   //http://www.rgraph.net/blog/2013/january/html5-canvas-dashed-lines.html
-  ctx.setLineDash([1,2]);
+  ctx.setLineDash([1,dashesSpace]);
   ctx.font =  fontSize + "px Arial";
   ctx.textAlign = "left";
   ctx.textBaseline = "middle";  
