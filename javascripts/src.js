@@ -33,7 +33,7 @@ function drawText(event)
   
   //http://stackoverflow.com/questions/15397036/drawing-dashed-lines-on-html5-canvas
   //http://www.rgraph.net/blog/2013/january/html5-canvas-dashed-lines.html
-  ctx.setLineDash([1,dashesSpace]);
+  ctx.setLineDash([Math.floor(Math.sqrt(dashesSpace)) ,dashesSpace]);//also make the dots a bit larger when the spaces get larger
   ctx.font =  fontSize + "px Arial";
   ctx.textAlign = "left";
   ctx.textBaseline = "middle";  
