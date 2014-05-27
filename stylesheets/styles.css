@@ -39,6 +39,6 @@ span{display:inline-block;font-family:Arial;white-space:nowrap;}
     float: none;
     display: block;
   }
-  .credits,form,#header,#title{display:none} 
+  .credits,form,#header,#title,#cnv{display:none} 
 
 }

@@ -8,8 +8,11 @@ $(document).ready(function(){
    
      //this.href=$("#cnv")[0].toDataURL();
      var url = $("#cnv")[0].toDataURL();
-     $("#cnv").replaceWith("<img src='" +url + "' />");
+     $("#cnv").hide();
+     $("#cnv").after("<img id='imgRes' src='" +url + "' />");
       window.print();
+      $("#imgRes").remove();
+      $("#cnv").show();
   });
 });
 
