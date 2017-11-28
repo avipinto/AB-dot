@@ -1,18 +1,17 @@
 $(document).ready(function(){
   $("#txt,#fontSize,#dashesSpace").on("change keyup",drawText)
   drawText();
-  
   $("#export").on("click",function(event)
   {
     event.preventDefault();
    
      //this.href=$("#cnv")[0].toDataURL();
      var url = $("#cnv")[0].toDataURL();
-     $("#cnv").hide();
-     $("#cnv").after("<img id='imgRes' src='" +url + "' />");
-      window.print();
-      $("#imgRes").remove();
-      $("#cnv").show();
+     $("#imgRes").attr("src",url).on("load", function()
+     {
+         window.print();
+     });
+      
   });
 });
 
@@ -36,10 +35,11 @@ function drawText(event)
   ctx.setLineDash([Math.floor(Math.sqrt(dashesSpace)) ,dashesSpace]);//also make the dots a bit larger when the spaces get larger
   ctx.font =  fontSize + "px Arial";
   ctx.textAlign = "left";
-  ctx.textBaseline = "middle";  
+  ctx.textBaseline = "middle";
+    ctx.lineWidth = 3;
   //ctx.fillText($("#inputText").val(), centerX, centerY);
   var posX = 25;//canvas.width / 2;
-  var posY = canvas.height / 2;
+  var posY = canvas.height - (fontSize * 0.7);
   ctx.strokeText(newText, posX, posY);
   // ctx.fillText(newText, posX, posY);
   

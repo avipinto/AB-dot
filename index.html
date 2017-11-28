@@ -1,21 +1,16 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Ab-dot by avipinto</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="javascripts/src.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/avipinto/AB-dot">View On GitHub</a></li>
-      </div>
-
         <section>
         <div id="title">
            <p>Type a word in any language, print and let your kids trace it</p>
@@ -24,14 +19,16 @@
         </div>
 
     </section>
-<form id="form">
-    <input type="text" id="txt" value="אמא"/><br />
-    <input type="range" min="40" max="1000" id="fontSize" value="420" title="change the font size" /><br />
-    <input type="range" min="2" max="40" step="1" id="dashesSpace" value="2" title="change the space between the dots" /><br />
-    <a href="#" target="_blank" id="export"> Print</a>
-</form> 
-<canvas id="cnv" width="1500" height="450"></canvas><br />
-    
+      <form id="form">
+          <input type="text" id="txt" dir="auto" value="אמא" /><br /><br />
+          Font size: <br />
+          <input type="range" min="40" max="1000" id="fontSize" value="420" title="change the font size" /><br />
+          Dots:<br />
+          <input type="range" min="2" max="40" step="1" id="dashesSpace" value="7" title="change the space between the dots" /><br />
+          <a href="#" target="_blank" id="export"> Print</a>
+      </form> 
+<canvas id="cnv" class="noPrint" width="1500" height="450"></canvas><br />
+<img id="imgRes" />   
        <span class="credits left">Project maintained by <a href="https://github.com/avipinto">avipinto</a></span>
           <span class="credits right">Hosted on GitHub Pages</span>
       
